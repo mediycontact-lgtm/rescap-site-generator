@@ -1,0 +1,10 @@
+{
+  "format": "rescap.github-approval-policy.v1",
+  "repository": { "full_name": "YOUR_OWNER/YOUR_REPO", "id": null },
+  "base_ref": "main",
+  "method": "review",
+  "approvers": [],
+  "required_approvals": 1,
+  "allow_pr_author": false,
+  "maximum_age_seconds": 86400
+}

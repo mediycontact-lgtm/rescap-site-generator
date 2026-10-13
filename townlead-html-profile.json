@@ -1,0 +1,177 @@
+{
+  "format": "rescap.html-adapter-job.v1",
+  "job_id": "fictional-townlead-style-html-001",
+  "generated_at": "2026-10-09T08:07:34+09:00",
+  "producer": "example HTML generation operator",
+  "site": {
+    "id": "fictional-service",
+    "name": "架空サービスのHTML入力例",
+    "url": "https://example.com/",
+    "publisher": "架空の公開者"
+  },
+  "policy": {
+    "read_allowed": true,
+    "canonical_reference_allowed": true,
+    "search_answer_allowed": true,
+    "model_training_allowed": false,
+    "dataset_redistribution_allowed": false
+  },
+  "pages": [
+    {
+      "id": "home",
+      "url": "https://example.com/",
+      "authored_at": "2026-10-09T08:00:00+09:00",
+      "public": true,
+      "path": "index.html"
+    },
+    {
+      "id": "portfolio",
+      "url": "https://example.com/portfolio.html",
+      "authored_at": "2026-10-09T08:00:00+09:00",
+      "public": true,
+      "path": "portfolio.html"
+    }
+  ],
+  "mappings": [
+    {
+      "id": "description",
+      "page_id": "home",
+      "selector": ".hero__title",
+      "mode": "one",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "サービスの説明",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "price",
+      "page_id": "home",
+      "selector": ".service__card--main .service__card-price",
+      "mode": "one",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "基本料金と条件",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "plans",
+      "page_id": "home",
+      "selector": ".service__card",
+      "mode": "each",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "label",
+          "label": "プラン・オプション",
+          "selector": ".service__card-badge",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "features",
+      "page_id": "home",
+      "selector": ".service__card .service__card-features li",
+      "mode": "each",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "内容・追加費用の条件",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "semiorder",
+      "page_id": "home",
+      "selector": ".service__semi-order",
+      "mode": "one",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "構成・内容の調整",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "notes",
+      "page_id": "home",
+      "selector": ".service__notes-list li",
+      "mode": "each",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "サービスの条件",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    },
+    {
+      "id": "faq",
+      "page_id": "home",
+      "selector": ".faq__item",
+      "mode": "each",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "question",
+          "label": "FAQの質問",
+          "selector": ".faq__question",
+          "exclude_selectors": [
+            ".faq__icon"
+          ],
+          "disclosure": null
+        },
+        {
+          "id": "answer",
+          "label": "FAQの回答",
+          "selector": ".faq__answer-inner",
+          "exclude_selectors": [],
+          "disclosure": {
+            "container_selector": ".faq__answer",
+            "trigger_selector": ".faq__question"
+          }
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "page_id": "portfolio",
+      "selector": ".page-header__sub",
+      "mode": "one",
+      "min_matches": 1,
+      "claims": [
+        {
+          "id": "text",
+          "label": "制作例について",
+          "selector": ":scope",
+          "exclude_selectors": [],
+          "disclosure": null
+        }
+      ]
+    }
+  ]
+}

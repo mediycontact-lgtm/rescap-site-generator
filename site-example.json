@@ -1,0 +1,7 @@
+{
+  "format": "rescap.site-config.v1",
+  "build_dir": "html-example",
+  "mapping": "townlead-html-profile.json",
+  "public_path": "rescap",
+  "public_build": true
+}

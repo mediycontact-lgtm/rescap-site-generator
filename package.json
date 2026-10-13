@@ -1,0 +1,48 @@
+{
+  "name": "@rescap/site-generator",
+  "version": "0.4.0",
+  "description": "Internal review candidates for adding ResCap to an existing static site's build.",
+  "type": "module",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "bin": {
+    "rescap-site": "site-cli.mjs"
+  },
+  "exports": {
+    ".": "./site.mjs",
+    "./json": "./index.mjs",
+    "./html": "./html-adapter.mjs",
+    "./github-approval": "./github-approval.mjs",
+    "./release": "./release.mjs",
+    "./hosting": "./hosting.mjs",
+    "./local-approval": "./local-approval.mjs"
+  },
+  "files": [
+    "local-approval.mjs",
+    "hosting.mjs",
+    "release.mjs",
+    "public-reader.mjs",
+    "site-cli.mjs",
+    "site.mjs",
+    "index.mjs",
+    "html-adapter.mjs",
+    "github-approval.mjs",
+    "github-policy-example.json",
+    "README.md",
+    "LICENSE",
+    "site-example.json",
+    "townlead-html-profile.json",
+    "html-example/",
+    "docs/adoption.md",
+    "docs/reference.md"
+  ],
+  "dependencies": {
+    "playwright": "1.62.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mediycontact-lgtm/rescap-site-generator.git"
+  }
+}
